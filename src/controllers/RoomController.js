@@ -78,39 +78,44 @@ class RoomController {
 
   save(req, res) {
     console.log("save");
-    const storage = multer.diskStorage({
-      destination: function (req, file, cb) {
-        cb(null, "uploads/");
-      },
-      filename: function (req, file, cb) {
-        const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
-        const extname = path.extname(file.originalname);
-        cb(null, uniqueSuffix + extname);
-      },
-    });
-
-    const upload = multer({ storage: storage });
-    upload.single("file")(req, res, (err) => {
-      if (err instanceof multer.MulterError) {
-        return res.status(400).json({ error: "Error al cargar la foto" });
-      } else if (err) {
-        return res.status(500).json({ error: "Error interno del servidor" });
-      }
-      const photo = req.file; // Accede al archivo cargado usando req.file
-      if (!photo) {
-        return res.status(400).json({ error: "No se ha cargado ninguna foto" });
-      }
-      const originalname = photo.originalname;
-      const mimetype = photo.mimetype;
-      const size = photo.size;
-      // Aquí puedes procesar la foto cargada, guardarla en el sistema de archivos o en una base de datos, etc.
-      return res.status(200).json({
-        message: "Foto cargada exitosamente",
-        originalname,
-        mimetype,
-        size,
+    try {
+      const storage = multer.diskStorage({
+        destination: function (req, file, cb) {
+          cb(null, "uploads/");
+        },
+        filename: function (req, file, cb) {
+          const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
+          const extname = path.extname(file.originalname);
+          cb(null, uniqueSuffix + extname);
+        },
       });
-    });
+  
+      const upload = multer({ storage: storage });
+      upload.single("file")(req, res, (err) => {
+        if (err instanceof multer.MulterError) {
+          return res.status(400).json({ error: "Error al cargar la foto" });
+        } else if (err) {
+          return res.status(500).json({ error: "Error interno del servidor" });
+        }
+        const photo = req.file; // Accede al archivo cargado usando req.file
+        if (!photo) {
+          return res.status(400).json({ error: "No se ha cargado ninguna foto" });
+        }
+        const originalname = photo.originalname;
+        const mimetype = photo.mimetype;
+        const size = photo.size;
+        // Aquí puedes procesar la foto cargada, guardarla en el sistema de archivos o en una base de datos, etc.
+        return res.status(200).json({
+          message: "Foto cargada exitosamente",
+          originalname,
+          mimetype,
+          size,
+        });
+      });
+    } catch (error) {
+      console.log(error)
+    }
+   
   }
 
   export(req, res) {

@@ -1,5 +1,6 @@
 
 var guardarArchivo = function (ui, forceDialog) {
+    console.log("HOLAAA GUARDAR")
     if (!forceDialog && ui.editor.filename != null) {
         update(ui, ui.editor.getOrCreateFilename());
     } else {
@@ -14,10 +15,15 @@ var guardarArchivo = function (ui, forceDialog) {
                 return false;
             }
             ));
+
+
+
+
         ui.showDialog(dlg.container, 300, 100, true, true);
         dlg.init();
     }
 };
+
 var update = function (ui, name) {
     if (name != null) {
         if (ui.editor.graph.isEditing()) {
@@ -30,6 +36,7 @@ var update = function (ui, name) {
         ui.updateDocumentTitle();
     }
 }
+
 var save = async function (ui, name) {
     if (name != null) {
         if (ui.editor.graph.isEditing()) {
