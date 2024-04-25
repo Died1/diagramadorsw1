@@ -1,0 +1,37 @@
+
+body {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+#form-new,
+#form-join {
+    display:
+        inline-block;
+    margin-right: 10px;
+}
+
+#form-new input[type="submit"],
+#form-join button {
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px 20px;
+    
+}
+
+#form-join input[type="text"] {
+    font-size: 24px;
+    padding: 10px;
+}
+
+#form-new input[type="submit"]:hover,
+#form-join button:hover {
+    background-color: lightblue;
+    /* New background color on hover */
+}

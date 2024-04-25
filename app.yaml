@@ -1,0 +1,6 @@
+runtime: nodejs18
+
+# Otras configuraciones según las necesidades de tu aplicación
+env_variables:
+  PORT: '5000'
+  MONGODB_URI: 'mongodb+srv://root:root1@cluster0.8odsvya.mongodb.net/sw'

@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8" />    
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />      
+      <title>Manual de Usuario</title>
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/linuxguist/_static@main/css/copy_to_clipboard_style.css"
+      />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/gh/linuxguist/_static@main/js/modernizr.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      id="documentation_options"
+      data-url_root="./"
+      src="https://cdn.jsdelivr.net/gh/linuxguist/_static@main/documentation_options.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/gh/linuxguist/_static@main/jquery.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/gh/linuxguist/_static@main/underscore.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/gh/linuxguist/_static@main/doctools.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/gh/linuxguist/_static@main/language_data.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/gh/linuxguist/_static@main/js/theme.js"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/linuxguist/_static@main/css/theme.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/linuxguist/_static@main/pygments.css"
+      type="text/css"
+    />
+       <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/gh/linuxguist/_static@main/readthedocs-data.js"
+    ></script>
+
+       <style type="text/css">
+      code {
+        background: linear-gradient(#eee, #fe9);
+        color: green;
+        padding: 15px;
+        border-radius: 25px;
+      }
+
+      pre {
+        background: linear-gradient(#eee, #fe9);
+        color: green;
+        padding: 15px;
+        border-radius: 25px;
+      }
+    </style>
+  </head>
+
+  <body class="wy-body-for-nav">
+    <div class="wy-grid-for-nav">
+      <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+        <div class="wy-side-scroll">
+          <div class="wy-side-nav-search">
+            <a href="my_homepage.html" class="icon icon-home"> Manual de Usuario </a>                
+          </div>
+
+          <div
+            class="wy-menu wy-menu-vertical"
+            data-spy="affix"
+            role="navigation"
+            aria-label="main navigation"
+          >
+            <ul class="current">
+              <li class="toctree-l1 current">
+                <a class="current reference internal" href="#">UML DIAGRAMA DE SECUENCIA</a>
+                <ul>
+                  <li class="toctree-l2">
+                    <a
+                      class="reference internal"
+                      href="#how-to-send-requests-to-splash-http-api"
+                      >How to send requests to Splash HTTP API?</a
+                    >
+                  </li>
+
+                  <li class="toctree-l2">
+                    <a
+                      class="reference internal"
+                      href="#i-m-getting-lots-of-504-timeout-errors-please-help"
+                      >I’m getting lots of 504 Timeout errors, please
+                      help!</a
+                    >
+                  </li>
+
+                  <li class="toctree-l2">
+                    <a
+                      class="reference internal"
+                      href="#website-is-not-rendered-correctly"
+                      >Website is not rendered correctly</a
+                    >
+                  </li>
+
+                  <li class="toctree-l2">
+                    <a class="reference internal" href="#splash-crashes"
+                      >Splash crashes</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+        <nav class="wy-nav-top" aria-label="top navigation">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="my_homepage.html">Home</a>
+        </nav>
+
+        <div class="wy-nav-content" style="max-width: 100% !important; background: rgb(245, 245, 245);">
+          <div class="rst-content">
+            <div
+              role="main"
+              class="document"
+              itemscope="itemscope"
+              itemtype="http://schema.org/Article"
+            >
+              <div itemprop="articleBody">
+                <div class="section" id="faq">
+                  <h1>
+                    Manual De Usuario<a
+                      class="headerlink"
+                      href="#faq"
+                      title="Permalink to this headline"
+                      >¶</a
+                    >
+                  </h1>
+
+                  <div
+                    class="section"
+                    id="how-to-send-requests-to-splash-http-api"
+                  >
+                    <span id="using-http-api"></span>
+                    <h2>
+                      How to send requests to Splash HTTP API?<a
+                        class="headerlink"
+                        href="#how-to-send-requests-to-splash-http-api"
+                        title="Permalink to this headline"
+                        >¶</a
+                      >
+                    </h2>
+                    <div
+                      style="
+                        float: right;
+                        display: flex;
+                        height: 100%;
+                        justify-content: center;
+                        align-items: center;
+                      "
+                    >
+                      <img
+                        src="https://previews.123rf.com/images/salamatik/salamatik1801/salamatik180100019/92979836-perfil-an%C3%B3nimo-icono-de-la-cara-persona-silueta-gris-avatar-masculino-por-defecto-foto-de.jpg"
+                        alt="Avatar"
+                      />
+                    </div>
+                    <p>
+                      The recommended way is to use
+                      <code class="docutils literal notranslate"
+                        ><span class="pre">application/json</span></code
+                      >
+                      POST requests, because this way you can preserve data
+                      types, and there is no limit on request size.
+                    </p>
+
+        
+
+                    
+                  </div>
+                  <div
+                    class="section"
+                    id="i-m-getting-lots-of-504-timeout-errors-please-help"
+                  >
+                    <span id="timeouts"></span>
+                    <h2>
+                      I’m getting lots of 504 Timeout errors, please help!<a
+                        class="headerlink"
+                        href="#i-m-getting-lots-of-504-timeout-errors-please-help"
+                        title="Permalink to this headline"
+                        >¶</a
+                      >
+                    </h2>
+                    <p>
+                      HTTP 504 error means a request to Splash took more
+                      than
+                      <a
+                        class="reference internal"
+                        href="https://splash.readthedocs.io/en/stable/api.html#arg-timeout"
+                        ><span class="std std-ref">timeout</span></a
+                      >
+                      seconds to complete (30s by default) - Splash aborts
+                      script execution after the timeout. To override the
+                      timeout value pass
+                      <a
+                        class="reference internal"
+                        href="https://splash.readthedocs.io/en/stable/api.html#arg-timeout"
+                        ><span class="std std-ref">‘timeout’</span></a
+                      >
+                      argument to the Splash endpoint you’re using.
+                    </p>
+                    
+                      
+                    </div>
+                    <div
+                      class="section"
+                      id="splash-lua-script-does-too-many-things"
+                    >
+                      <span id="slow-script"></span>
+                      <h3>
+                        2. Splash Lua script does too many things<a
+                          class="headerlink"
+                          href="#splash-lua-script-does-too-many-things"
+                          title="Permalink to this headline"
+                          >¶</a
+                        >
+                      </h3>
+                      
+                      <div class="admonition note">
+                        <p class="first admonition-title">Note</p>
+                        <p class="last">
+                          <a
+                            class="reference external"
+                            href="https://www.nginx.com/"
+                            >Nginx</a
+                          >
+                          (which is another popular load balancer) provides
+                          an internal queue only in its commercial version,
+                          <a
+                            class="reference external"
+                            href="https://www.nginx.com/products/"
+                            >Nginx Plus</a
+                          >.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="section" id="how-to-run-splash-in-production">
+                    <span id="splash-in-production"></span>
+                    <h2>
+                      How to run Splash in production?<a
+                        class="headerlink"
+                        href="#how-to-run-splash-in-production"
+                        title="Permalink to this headline"
+                        >¶</a
+                      >
+                    </h2>
+                    <div class="section" id="easy-way">
+                      <h3>
+                        Easy Way<a
+                          class="headerlink"
+                          href="#easy-way"
+                          title="Permalink to this headline"
+                          >¶</a
+                        >
+                      </h3>
+                      <p>
+                        If you want to get started quickly take a look at
+                        <a
+                          class="reference external"
+                          href="https://github.com/TeamHG-Memex/aquarium"
+                          >Aquarium</a
+                        >
+                        (which is a Splash setup without many of the
+                        pitfalls) or use a hosted solution like
+                        <a
+                          class="reference external"
+                          href="http://scrapinghub.com/splash/"
+                          >ScrapingHub’s</a
+                        >.
+                      </p>
+                      <p>
+                        Don’t forget to use resource timeouts in your client
+                        code (see
+                        <a class="reference internal" href="#slow-website"
+                          ><span class="std std-ref"
+                            >1. Slow website</span
+                          ></a
+                        >). It also makes sense to retry a couple of times
+                        if Splash returns 5xx error response.
+                      </p>
+                    </div>
+                    <div class="section" id="hard-way">
+                      <h3>
+                        Hard Way<a
+                          class="headerlink"
+                          href="#hard-way"
+                          title="Permalink to this headline"
+                          >¶</a
+                        >
+                      </h3>
+                      <p>
+                        If you want to create your own production setup,
+                        here is a small non-exhaustive checklist:
+                      </p>
+                      <ul class="simple">
+                        <li>
+                          Splash should be daemonized and started on boot;
+                        </li>
+                        <li>
+                          in case of failures or segfaults Splash must be
+                          restarted;
+                        </li>
+                        <li>memory usage should be limited;</li>
+                        <li>
+                          several Splash instances should be started to use
+                          all CPU cores and/or multiple servers;
+                        </li>
+                        <li>
+                          requests queue should be moved to the load
+                          balancer to make rendering more robust (see
+                          <a
+                            class="reference internal"
+                            href="#splash-overloaded"
+                            ><span class="std std-ref"
+                              >3. Splash instance is overloaded</span
+                            ></a
+                          >).
+                        </li>
+                      </ul>
+                      <p>
+                        Of course, it is also good to setup monitoring,
+                        configuration management, etc. - all the usual
+                        stuff.
+                      </p>
+                      <p>
+                        To daemonize Splash, start it on boot and restart on
+                        failures one can use Docker: since Docker 1.2 there
+                        are
+                        <code class="docutils literal notranslate"
+                          ><span class="pre">--restart</span></code
+                        >
+                        and
+                        <code class="docutils literal notranslate"
+                          ><span class="pre">-d</span></code
+                        >
+                        options which can be used together. Another way to
+                        do that is to use standard tools like upstart,
+                        systemd or supervisor.
+                      </p>
+                      <div class="admonition note">
+                        <p class="first admonition-title">Note</p>
+                        <p class="last">
+                          Docker
+                          <code class="docutils literal notranslate"
+                            ><span class="pre">--restart</span></code
+                          >
+                          option won’t work without
+                          <code class="docutils literal notranslate"
+                            ><span class="pre">-d</span></code
+                          >.
+                        </p>
+                      </div>
+                      <p>
+                        Splash uses an unbound in-memory cache and so it
+                        will eventually consume all RAM. A workaround is to
+                        restart the process when it uses too much memory;
+                        there is Splash
+                        <code class="docutils literal notranslate"
+                          ><span class="pre">--maxrss</span></code
+                        >
+                        option for that. You can also add Docker
+                        <code class="docutils literal notranslate"
+                          ><span class="pre">--memory</span></code
+                        >
+                        option to the mix.
+                      </p>
+                      <p>
+                        In production it is a good idea to pin Splash
+                        version - instead of
+                        <code class="docutils literal notranslate"
+                          ><span class="pre">scrapinghub/splash</span></code
+                        >
+                        it is usually better to use something like
+                        <code class="docutils literal notranslate"
+                          ><span class="pre"
+                            >scrapinghub/splash:2.0</span
+                          ></code
+                        >.
+                      </p>
+                      <p>
+                        A command for starting a long-running Splash server
+                        which uses up to 4GB RAM and daemonizes &amp;
+                        restarts itself could look like this:
+                      </p>
+                      <div class="highlight-default notranslate">
+                        <div class="highlight">
+                  
+                        </div>
+                      </div>
+                      <p>
+                        You also need a load balancer; for example configs
+                        check
+                        <a
+                          class="reference external"
+                          href="https://github.com/TeamHG-Memex/aquarium"
+                          >Aquarium</a
+                        >
+                        or an HAProxy config in Splash
+                        <a
+                          class="reference external"
+                          href="https://github.com/scrapinghub/splash/blob/master/examples/splash-haproxy.conf"
+                          >repository</a
+                        >.
+                      </p>
+                    </div>
+                    <div class="section" id="ansible-way">
+                      <h3>
+                        Ansible Way<a
+                          class="headerlink"
+                          href="#ansible-way"
+                          title="Permalink to this headline"
+                          >¶</a
+                        >
+                      </h3>
+                      <p>
+                        <a
+                          class="reference external"
+                          href="https://www.ansible.com/"
+                          >Ansible</a
+                        >
+                        role for Splash is available via third-party
+                        project:
+                        <a
+                          class="reference external"
+                          href="https://github.com/nabilm/ansible-splash"
+                          >https://github.com/nabilm/ansible-splash</a
+                        >.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="section"
+                    id="website-is-not-rendered-correctly"
+                  >
+                    <span id="rendering-problems"></span>
+                    <h2>
+                      Website is not rendered correctly<a
+                        class="headerlink"
+                        href="#website-is-not-rendered-correctly"
+                        title="Permalink to this headline"
+                        >¶</a
+                      >
+                    </h2>
+                    <p>
+                      Sometimes websites are not rendered correctly by
+                      Splash. Common reasons:
+                    </p>
+                    
+                  </div>
+
+                  <div class="section" id="splash-crashes">
+                    <h2>
+                      Splash crashes<a
+                        class="headerlink"
+                        href="#splash-crashes"
+                        title="Permalink to this headline"
+                        >¶</a
+                      >
+                    </h2>
+                    <p>Common reasons:</p>
+                    
+                    <p>
+                      If you have troubles making Splash work, consider
+                      asking a question at
+                      <a
+                        class="reference external"
+                        href="https://stackoverflow.com/"
+                        >https://stackoverflow.com</a
+                      >. If you think it is a Splash bug, raise an issue at
+                      <a
+                        class="reference external"
+                        href="https://github.com/scrapinghub/splash/issues"
+                        >https://github.com/scrapinghub/splash/issues</a
+                      >.
+                    </p>
+                  </div>
+
+                  <h3>References, other nice pages about AWK</h3>
+
+                  
+                  <hr
+                    style="
+                      height: 2px;
+                      border-width: 0;
+                      color: gray;
+                      background-color: gray;
+                    "
+                  />
+
+                  A Horizontal Line Above With Style
+
+                  <br />
+                  <br />
+
+                  <a
+                    href="https://www.africau.edu/images/default/sample.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Profile Download</a
+                  >
+
+                  <a
+                    href="tel:8007686040"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Call:8007686040</a
+                  >
+
+                  <a
+                    href="http://good-sam.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Home Page</a
+                  >
+
+                  <a
+                    href="mailto:test@test.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Send Email</a
+                  >
+
+                  <br />
+                  <br />
+
+                  <b> Embedding Images, Audio or Video Files: </b>
+
+                  <br />
+                  <br />
+
+                  <img
+                    src="https://i.imgur.com/dO3g4hl.jpg"
+                    alt="beach"
+                    style="width: 100%; height: 100%"
+                  />
+
+
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script type="text/javascript">
+      jQuery(function () {
+        SphinxRtdTheme.Navigation.enable(true);
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/linuxguist/_static@main/js/clipboard.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/linuxguist/_static@main/js/copy_to_clipboard_style.js"></script>
+
+  </body>
+</html>
+    
