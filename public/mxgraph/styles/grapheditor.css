@@ -2186,6 +2186,6 @@ html td.mxWindowTitle {
 	box-sizing: content-box;
 }
 
-.geDialog {
+.geDialog, .div.geFormatSection, table {
 	box-sizing: content-box;
 }

@@ -85,7 +85,7 @@
   <body>
     <header id="header" class="bg-dark py-3" style="background: #a6aaad;">
       <div class="row">
-        <div class="col-8">
+        <div class="col-6">
           <div class="row">
             <div class="col-1 mt-2">
               <img src="/icons8-diagram-34.png" alt="" />
@@ -101,9 +101,9 @@
             </div>
           </div>
         </div>
-        <div class="col-4 text-end mt-1">
+        <div class="col-6 text-end mt-1">
           <div class="row d-flex justify-content-center algin-items-center">
-            <div class="col-md-8 mt-2">
+            <div class="col-md-6 mt-2">
               <!-- Primera columna con botón de compartir -->
               <div class="btn-group" role="group" aria-label="Basic example">
                 <button
@@ -128,27 +128,39 @@
                     ></path></svg></button>
               </div>
             </div>
-            <div class="col-md-4 text-end">
-              <div class="dropdown">
-                <a
-                  class="btn dropdown-toggle"
-                  href="#"
-                  role="button"
-                  id="dropdownMenuLink"
-                  data-bs-toggle="dropdown"
-                >
-                  <img
-                    src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Photos.png"
-                    alt="Avatar"
-                    class="rounded-circle"
-                    style="width: 40px;"
-                  />
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">Ver Perfil</a></li>
-                  <li><a class="dropdown-item" href="#">Salir</a></li>
-                </ul>
+            <div class="col-md-6 text-end">
+              <div class="row">
+                <div class="col-8">
+                  <div>
+                    {{user.user.username}}
+                  </div>
+                  <div>
+
+                  {{user.user.email}}
+                  </div>
+                </div>
+                <div class="col-4 dropdown">
+                  <a
+                    class="btn dropdown-toggle"
+                    href="#"
+                    role="button"
+                    id="dropdownMenuLink"
+                    data-bs-toggle="dropdown"
+                  >
+                    <img
+                      src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Photos.png"
+                      alt="Avatar"
+                      class="rounded-circle"
+                      style="width: 40px;"
+                    />
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">Ver Perfil</a></li>
+                    <li><a class="dropdown-item" href="#">Salir</a></li>
+                  </ul>
+                </div>
               </div>
+             
             </div>
           </div>
         </div>

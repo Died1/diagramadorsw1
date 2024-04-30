@@ -1,8 +1,4 @@
-<!-- 
-Jampack
-Author: Hencework
-Contact: contact@hencework.com
--->
+
 <html lang="en">
   <head>
     <!-- Meta Tags -->
@@ -552,8 +548,7 @@ Contact: contact@hencework.com
                         </div>
                       </div>
                     </div>
-
-                    
+                   
                   </div>
                 </div>
               </li>
@@ -649,7 +644,8 @@ Contact: contact@hencework.com
                 </li>
               </ul>
             </div>
-            
+            <div class="menu-gap"></div>
+           
           </div>
         </div>
         <!-- /Main Menu -->
@@ -664,10 +660,12 @@ Contact: contact@hencework.com
           <div class="fmapp-wrap">
             <nav class="fmapp-sidebar">
               <div data-simplebar class="nicescroll-bar">
-                <div class="menu-content-wrap">                
+                <div class="menu-content-wrap">
+                  
+
                   <div class="menu-group">
                     <ul class="nav nav-light navbar-nav flex-column">
-                      <li class="nav-item active">
+                      <li class="nav-item ">
                         <a class="nav-link" href="/">
                           <span class="nav-icon-wrap"><span
                               class="feather-icon"
@@ -677,7 +675,7 @@ Contact: contact@hencework.com
                       </li>
                       
 
-                      <li class="nav-item">
+                      <li class="nav-item active">
                         <a class="nav-link" href="/shared">
                           <span class="nav-icon-wrap"><span
                               class="feather-icon"
@@ -870,79 +868,7 @@ Contact: contact@hencework.com
                             </tr>
                           </thead>
                           <tbody>
-                            <tr>
-                              <td>
-                                <div class="media">
-                                  <div class="media-head me-3">
-                                    
-                                  </div>
-                                  <div class="media-body">
-                                    <div class="file-name">
-                                       														
-                                      <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModalCenter"  style="background-color: #0074d9; color: white;">
-                                        Nuevo
-                                      </button>                                                                      
-                                    </div>
-                                    
-                                  </div>
-                                </div>
-                              </td>
-                              <td>
-                                
-                              </td>
-                              <td>Today 11:02 AM</td>
-                              <td>2,637KB</td>
-                              <td class="text-right"><a
-                                  class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover dropdown-toggle no-caret"
-                                  href="#"
-                                  data-bs-toggle="dropdown"
-                                  role="button"
-                                  aria-haspopup="true"
-                                  aria-expanded="false"
-                                ><span class="icon"><span
-                                      class="feather-icon"
-                                    ><i
-                                        data-feather="more-horizontal"
-                                      ></i></span></span></a>
-                                <div class="dropdown-menu">
-                                  <a class="dropdown-item" href="#"><span
-                                      class="feather-icon dropdown-icon"
-                                    ><i data-feather="eye"></i></span><span
-                                    >Preview</span></a>
-                                  <a class="dropdown-item" href="#"><span
-                                      class="feather-icon dropdown-icon"
-                                    ><i data-feather="copy"></i></span><span
-                                    >Duplicate</span></a>
-                                  <a class="dropdown-item" href="#"><span
-                                      class="feather-icon dropdown-icon"
-                                    ><i
-                                        data-feather="skip-forward"
-                                      ></i></span><span>Move</span></a>
-                                  <a class="dropdown-item" href="#"><span
-                                      class="feather-icon dropdown-icon"
-                                    ><i
-                                        data-feather="user-plus"
-                                      ></i></span><span>Invite</span></a>
-                                  <a class="dropdown-item" href="#"><span
-                                      class="feather-icon dropdown-icon"
-                                    ><i data-feather="link-2"></i></span><span
-                                    >Share Link</span></a>
-                                  <div class="dropdown-divider"></div>
-                                  <a class="dropdown-item" href="#"><span
-                                      class="feather-icon dropdown-icon"
-                                    ><i data-feather="info"></i></span><span
-                                    >View Details</span></a>
-                                  <a class="dropdown-item" href="#"><span
-                                      class="feather-icon dropdown-icon"
-                                    ><i data-feather="download"></i></span><span
-                                    >Download</span></a>
-                                  <a class="dropdown-item" href="#"><span
-                                      class="feather-icon dropdown-icon"
-                                    ><i data-feather="trash-2"></i></span><span
-                                    >Delete</span></a>
-                                </div>
-                              </td>
-                            </tr>
+
                             {{#each rooms}}
                               <tr>
                                 <td>
@@ -968,22 +894,24 @@ Contact: contact@hencework.com
                                 <td>
                                   <div
                                     class="avatar-group avatar-group-overlapped"
-                                  >    
-                                  {{#each this.members}}                              
-                                    <div
-                                      class="avatar avatar-rounded"
-                                      data-bs-toggle="tooltip"
-                                      data-bs-placement="top"
-                                      title=""
-                                      data-bs-original-title="{{this.email}} | {{this.role}}"
-                                    >
-                                      <img
-                                        src="dist/img/avatar13.jpg"
-                                        alt="user"
-                                        class="avatar-img"
-                                      />
-                                    </div>
+                                  >
+                                  
+                                    {{#each this.members}}                              
+                                        <div
+                                        class="avatar avatar-rounded"
+                                        data-bs-toggle="tooltip"
+                                        data-bs-placement="top"
+                                        title=""
+                                        data-bs-original-title="{{this.email}} | {{this.role}}"
+                                        >
+                                        <img
+                                            src="dist/img/avatar13.jpg"
+                                            alt="user"
+                                            class="avatar-img"
+                                        />
+                                        </div>
                                     {{/each}}
+                                    
                                   </div>
                                 </td>
                                 <td>Today 11:02 AM</td>
@@ -1460,7 +1388,7 @@ Contact: contact@hencework.com
     <script src="dist/js/chips-init.js"></script>
 
     <script>
-
+      
     </script>
   </body>
 </html>
